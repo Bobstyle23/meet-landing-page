@@ -122,9 +122,13 @@ body {
   margin: $spacing-80 auto 0;
 }
 
+.main-container {
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
 .hero {
   display: flex;
-  flex: 1;
   justify-content: space-between;
   padding: $spacing-64 0;
   margin-bottom: $spacing-56;
@@ -147,6 +151,7 @@ body {
     gap: $spacing-32;
     text-align: center;
     max-width: 44.83rem;
+    padding: 0 1.8rem;
   }
   &__heading {
     @extend %typography-preset-1;
