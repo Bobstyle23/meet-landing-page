@@ -12,20 +12,29 @@
 /*   white: #fafafa, */
 /* ); */
 /* NOTE:  extends */
-.hero__heading, .hero__cta--intro:hover, .hero__cta--intro, .hero__cta--download:hover, .hero__cta--download, .hero__description {
+.hero__heading, .usage__step--number, .hero__cta--intro:hover, .hero__cta--intro, .hero__cta--download:hover, .hero__cta--download, .usage__description, .hero__description, .usage__header p:first-child, .usage__heading {
   font-size: 6.4rem;
   font-weight: 900;
   line-height: 1.1;
   letter-spacing: 0;
 }
 
-.hero__description {
+.usage__heading {
+  font-size: 4rem;
+}
+
+.usage__header p:first-child {
+  font-size: 1.6rem;
+  letter-spacing: 0.4rem;
+}
+
+.usage__description, .hero__description {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.5;
 }
 
-.hero__cta--intro:hover, .hero__cta--intro, .hero__cta--download:hover, .hero__cta--download {
+.usage__step--number, .hero__cta--intro:hover, .hero__cta--intro, .hero__cta--download:hover, .hero__cta--download {
   font-size: 1.6rem;
   line-height: 1.5;
 }
@@ -36,6 +45,13 @@
   height: 5.6rem;
   border-radius: 2.9rem;
   padding: 1.6rem 4rem;
+}
+
+.usage__step, .usage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* PERF: mixins */
@@ -73,7 +89,6 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 6.4rem 0;
-  margin-bottom: 5.6rem;
 }
 .hero__img--left {
   margin-left: -2.6rem;
@@ -120,6 +135,55 @@ body {
   color: #fafafa;
   cursor: pointer;
   width: 16.1rem;
+}
+
+.usage {
+  max-width: 112rem;
+  margin: 5.6rem auto 7.2rem;
+}
+.usage__vertical-line {
+  height: 8rem;
+  width: 1px;
+  top: 0;
+  background-color: #d1d1df;
+}
+.usage__step {
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 50%;
+  border: 1px solid #d1d1df;
+  margin-bottom: 6.4rem;
+}
+.usage__step--number {
+  color: #87879d;
+}
+.usage__gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 3.2rem;
+  margin-bottom: 6.4rem;
+}
+.usage__gallery img {
+  width: 25.6rem;
+  height: auto;
+  border-radius: 0.8rem;
+}
+.usage__header {
+  max-width: 54.4rem;
+  text-align: center;
+}
+.usage__header p:first-child {
+  color: #4d96a9;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+}
+.usage__heading {
+  color: #28283d;
+  padding: 0 5.2rem;
+  margin-bottom: 3.2rem;
+}
+.usage__description {
+  color: #87879d;
 }
 
 /*# sourceMappingURL=styles.css.map */
