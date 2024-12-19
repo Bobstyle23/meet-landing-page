@@ -1,4 +1,4 @@
-/* NOTE: variables */
+/* NOTE:  color variables */
 
 $color-cyan-600: #4d96a9;
 $color-cyan-300: #8fe3f9;
@@ -8,9 +8,35 @@ $color-slate-900: #28283d;
 $color-slate-600: #87879d;
 $color-slate-300: #d1d1df;
 $color-white: #fafafa;
+$color-hover-blue: #71c0d4;
+$color-hover-purple: #b18bdd;
 
-/* NOTE: typography extends */
+/* NOTE: spacing variables */
+$spacing-112: 11.2rem;
+$spacing-80: 8rem;
+$spacing-72: 7.2rem;
+$spacing-64: 6.4rem;
+$spacing-56: 5.6rem;
+$spacing-40: 4rem;
+$spacing-32: 3.2rem;
+$spacing-24: 2.4rem;
+$spacing-16: 1.6rem;
+$spacing-8: 0.8rem;
+$spacing-4: 0.4rem;
 
+/* PERF: maps */
+/* $colors: ( */
+/*   cyan-600: #4d96a9, */
+/*   cyan-300: #8fe3f9, */
+/*   purple-600: #855fb1, */
+/*   purple-300: #d9b8ff, */
+/*   slate-900: #28283d, */
+/*   slate-600: #87879d, */
+/*   slate-300: #d1d1df, */
+/*   white: #fafafa, */
+/* ); */
+
+/* NOTE:  extends */
 %typography-preset-1 {
   font-size: 6.4rem;
   font-weight: 900;
@@ -41,18 +67,28 @@ $color-white: #fafafa;
   line-height: 1.5;
 }
 
-/* NOTE: spacing variables */
-$spacing-112: 11.2rem;
-$spacing-80: 8rem;
-$spacing-72: 7.2rem;
-$spacing-64: 6.4rem;
-$spacing-56: 5.6rem;
-$spacing-40: 4rem;
-$spacing-32: 3.2rem;
-$spacing-24: 2.4rem;
-$spacing-16: 1.6rem;
-$spacing-8: 0.8rem;
-$spacing-4: 0.4rem;
+%button-style {
+  border: none;
+  width: 19.3rem;
+  height: 5.6rem;
+  border-radius: 2.9rem;
+  padding: 1.6rem 4rem;
+  @extend %typography-preset-5;
+}
+
+/* PERF: mixins */
+@mixin button-style($color, $background-color) {
+  background-color: $background-color;
+  color: $color;
+  @extend %button-style;
+}
+
+@mixin button-style-hover($color, $background-color) {
+  background-color: $background-color;
+  color: $color;
+  cursor: pointer;
+  @extend %button-style;
+}
 
 *,
 *::after,
