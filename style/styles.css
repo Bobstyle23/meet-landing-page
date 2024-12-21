@@ -90,6 +90,9 @@ body {
   justify-content: space-between;
   padding: 6.4rem 0;
 }
+.hero__img--tablet {
+  display: none;
+}
 .hero__header {
   display: flex;
   flex-direction: column;
@@ -253,6 +256,35 @@ body {
 }
 .footer .overlay__content-btn span {
   color: #d9b8ff;
+}
+
+@media (min-width: 48em) and (max-width: 64em) {
+  .header {
+    margin: 4.8rem auto 0;
+  }
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 6.4rem 0 0;
+  }
+  .hero__img {
+    margin-bottom: 7.2rem;
+  }
+  .hero__img--desktop {
+    display: none;
+  }
+  .hero__img--tablet {
+    display: block;
+  }
+  .hero__header {
+    gap: 2.4rem;
+  }
+  .hero__heading {
+    font-size: 4.8rem;
+  }
+  .hero__description {
+    font-size: 1.6rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
