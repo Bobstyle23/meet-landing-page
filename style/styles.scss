@@ -24,18 +24,6 @@ $spacing-16: 1.6rem;
 $spacing-8: 0.8rem;
 $spacing-4: 0.4rem;
 
-/* PERF: maps */
-/* $colors: ( */
-/*   cyan-600: #4d96a9, */
-/*   cyan-300: #8fe3f9, */
-/*   purple-600: #855fb1, */
-/*   purple-300: #d9b8ff, */
-/*   slate-900: #28283d, */
-/*   slate-600: #87879d, */
-/*   slate-300: #d1d1df, */
-/*   white: #fafafa, */
-/* ); */
-
 /* NOTE:  extends */
 %typography-preset-1 {
   font-size: 6.4rem;
@@ -351,6 +339,7 @@ body {
   }
 }
 
+/* PERF: tablets */
 @media (min-width: 48em) and (max-width: 75em) {
   .header {
     margin: 4.8rem auto 0;
@@ -456,6 +445,7 @@ body {
   }
 }
 
+/* PERF: small mobiles */
 @media (min-width: 20em) and (max-width: 30em) {
   .header {
     margin: 4.8rem auto 0;
@@ -476,7 +466,7 @@ body {
 
       &--tablet {
         display: block;
-        max-width: 35rem;
+        max-width: 32rem;
       }
     }
 
@@ -572,6 +562,118 @@ body {
         &-heading,
         &-description {
           max-width: 31.1rem;
+        }
+
+        &-heading {
+          font-size: 3.2rem;
+        }
+
+        &-description {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
+
+/* PERF: larger mobiles */
+@media (min-width: 30.06em) and (max-width: 47.94em) {
+  .header {
+    margin: 4.8rem auto 0;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding: $spacing-64 $spacing-32 0;
+
+    &__img {
+      margin-bottom: 4.8rem;
+
+      &--desktop {
+        display: none;
+      }
+
+      &--tablet {
+        display: block;
+        max-width: 45rem;
+      }
+    }
+
+    &__header {
+      gap: $spacing-32;
+      padding: 0;
+    }
+
+    &__heading {
+      font-size: 4.2rem;
+      padding: 0 5.6rem;
+    }
+  }
+
+  .usage {
+    margin: $spacing-56 $spacing-32 $spacing-64;
+
+    &__gallery {
+      grid-template-columns: repeat(2, 1fr);
+      gap: $spacing-24;
+
+      img {
+        max-width: 18rem;
+        height: auto;
+      }
+    }
+
+    &__header {
+      max-width: 50rem;
+
+      p:first-child {
+        font-size: 1.4rem;
+      }
+    }
+
+    &__heading {
+      font-size: 3.2rem;
+    }
+
+    &__description {
+      font-size: 1.6rem;
+    }
+  }
+
+  .footer {
+    height: 42.8rem;
+
+    &__image {
+      &--desktop {
+        display: none;
+      }
+
+      &--mobile {
+        display: block;
+        height: 32rem;
+        align-self: flex-end;
+        width: 100%;
+      }
+    }
+
+    &__overlay {
+      padding: $spacing-64 $spacing-32;
+      height: 32rem;
+    }
+
+    .overlay {
+      &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: $spacing-24;
+        text-align: center;
+
+        &-heading,
+        &-description {
+          max-width: 50rem;
         }
 
         &-heading {
