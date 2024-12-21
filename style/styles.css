@@ -30,10 +30,10 @@
 
 .footer .overlay__content-btn:hover, .footer .overlay__content-btn, .hero__cta--intro:hover, .hero__cta--intro, .hero__cta--download:hover, .hero__cta--download {
   border: none;
-  width: 19.3rem;
+  width: 20rem;
   height: 5.6rem;
   border-radius: 2.9rem;
-  padding: 1.6rem 4rem;
+  padding: 1.6rem 3.2rem;
 }
 
 .footer .overlay__content, .footer .step, .usage__step, .usage {
