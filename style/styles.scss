@@ -294,9 +294,15 @@ body {
   }
 
   &__image {
-    width: 100%;
-    height: 31.2rem;
-    align-self: flex-end;
+    &--tablet {
+      display: none;
+    }
+
+    &--desktop {
+      width: 100%;
+      height: 31.2rem;
+      align-self: flex-end;
+    }
   }
 
   &__overlay {
@@ -369,11 +375,13 @@ body {
 
     &__header {
       gap: $spacing-24;
+      padding: 0;
     }
 
     &__heading {
       @extend %typography-preset-1;
       font-size: 4.8rem;
+      padding: 0 $spacing-56;
     }
 
     &__description {
@@ -411,13 +419,21 @@ body {
   .footer {
     height: 42.8rem;
 
-    &__image,
-    &__overlay {
-      height: 32rem;
-    }
+    &__image {
+      &--desktop {
+        display: none;
+      }
 
+      &--tablet {
+        width: 100%;
+        height: 32rem;
+        display: block;
+        align-self: flex-end;
+      }
+    }
     &__overlay {
       padding: $spacing-64 $spacing-32;
+      height: 32rem;
     }
 
     .overlay {
