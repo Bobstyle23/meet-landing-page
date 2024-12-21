@@ -275,6 +275,7 @@ body {
   }
   .hero__img--tablet {
     display: block;
+    max-width: 76.8rem;
   }
   .hero__header {
     gap: 2.4rem;
@@ -283,6 +284,28 @@ body {
     font-size: 4.8rem;
   }
   .hero__description {
+    font-size: 1.6rem;
+  }
+  .usage {
+    margin: 5.6rem 3.2rem 6.4rem;
+  }
+  .usage__gallery {
+    column-gap: 2.4rem;
+  }
+  .usage__gallery img {
+    max-width: 15.6rem;
+    height: auto;
+  }
+  .usage__header {
+    max-width: 50.4rem;
+  }
+  .usage__header p:first-child {
+    font-size: 1.4rem;
+  }
+  .usage__heading {
+    font-size: 3.6rem;
+  }
+  .usage__description {
     font-size: 1.6rem;
   }
 }
