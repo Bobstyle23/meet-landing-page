@@ -308,6 +308,32 @@ body {
   .usage__description {
     font-size: 1.6rem;
   }
+  .footer {
+    height: 42.8rem;
+  }
+  .footer__image, .footer__overlay {
+    height: 32rem;
+  }
+  .footer__overlay {
+    padding: 6.4rem 3.2rem;
+  }
+  .footer .overlay__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4rem;
+    text-align: center;
+  }
+  .footer .overlay__content-heading, .footer .overlay__content-description {
+    max-width: 50.4rem;
+  }
+  .footer .overlay__content-heading {
+    font-size: 3.6rem;
+  }
+  .footer .overlay__content-description {
+    font-size: 1.6rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
