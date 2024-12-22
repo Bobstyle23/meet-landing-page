@@ -1,7 +1,7 @@
 /* NOTE:  color variables */
 /* NOTE: spacing variables */
 /* NOTE:  extends */
-.usage__heading, .footer .overlay__content-heading, .usage__header p:first-child, .hero__description, .usage__description, .footer .overlay__content-description, .hero__cta--download, .hero__cta--download:hover, .hero__cta--intro, .hero__cta--intro:hover, .footer .overlay__content-btn, .footer .overlay__content-btn:hover, .usage__step--number, .footer .step__number, .hero__heading {
+.usage__heading, .footer .overlay__content-heading, .usage__header p:first-child, .hero__description, .usage__description, .footer .overlay__content-description, .hero__cta--download, .hero__cta--download:hover, .hero__cta--intro, .hero__cta--intro:hover, .footer .overlay__content-btn, .footer .overlay__content-btn:hover, .usage__step--number, .footer__step--number, .hero__heading {
   font-size: 6.4rem;
   font-weight: 900;
   line-height: 1.1;
@@ -23,7 +23,7 @@
   line-height: 1.5;
 }
 
-.hero__cta--download, .hero__cta--download:hover, .hero__cta--intro, .hero__cta--intro:hover, .footer .overlay__content-btn, .footer .overlay__content-btn:hover, .usage__step--number, .footer .step__number {
+.hero__cta--download, .hero__cta--download:hover, .hero__cta--intro, .hero__cta--intro:hover, .footer .overlay__content-btn, .footer .overlay__content-btn:hover, .usage__step--number, .footer__step--number {
   font-size: 1.6rem;
   line-height: 1.5;
 }
@@ -36,7 +36,7 @@
   padding: 1.6rem 3.2rem;
 }
 
-.hero, .hero__header, .usage__step, .footer .step, .usage, .footer .overlay__content {
+.hero, .hero__header, .usage__step, .footer__step, .usage, .footer .overlay {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -128,13 +128,13 @@ body {
   width: 16.1rem;
 }
 
-.usage__vertical-line, .footer .vertical-line {
+.usage__vertical-line, .footer__vertical-line {
   height: 8rem;
   width: 1px;
   background-color: #d1d1df;
 }
 
-.usage__step, .footer .step {
+.usage__step, .footer__step {
   width: 5.6rem;
   height: 5.6rem;
   border-radius: 50%;
@@ -144,7 +144,7 @@ body {
   margin-bottom: 6.4rem;
 }
 
-.usage__step--number, .footer .step__number {
+.usage__step--number, .footer__step--number {
   color: #87879d;
 }
 
@@ -192,58 +192,44 @@ body {
 
 .footer {
   max-width: 144rem;
-  position: relative;
   height: 42rem;
-  display: flex;
   margin: 0 auto;
+  position: relative;
 }
 
-.footer .vertical-line {
+.footer__vertical-line, .footer__step {
   position: absolute;
   left: 50%;
 }
 
-.footer .step {
-  position: absolute;
+.footer__step {
   top: 8rem;
-  left: 50%;
   transform: translateX(-50%);
 }
 
-.footer__image--tablet, .footer__image--mobile {
-  display: none;
-}
-
-.footer__image--desktop {
+.footer__overlay {
   width: 100%;
   height: 31.2rem;
-  align-self: flex-end;
+  background-image: linear-gradient(to bottom, rgba(77, 150, 169, 0.8), rgba(77, 150, 169, 0.8)), url("../assets/desktop/image-footer.jpg");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  bottom: 0;
+  padding: 11.2rem 8rem;
 }
 
-.footer__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: rgba(77, 150, 169, 0.8);
-  padding: 11.2rem 8rem;
-  height: 31.2rem;
-  align-self: flex-end;
+.footer .overlay {
+  max-width: 112rem;
 }
 
 .footer .overlay__content {
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.footer .overlay__content-heading {
+  display: grid;
+  grid-template-columns: 44.5rem 35.5rem 25.6rem;
+  column-gap: 3.2rem;
   color: #fafafa;
-  max-width: 44.5rem;
 }
 
 .footer .overlay__content-description {
-  color: #fafafa;
   max-width: 35.5rem;
 }
 
@@ -251,7 +237,12 @@ body {
   background-color: #855fb1;
   color: #fafafa;
   width: 16.1rem;
+  justify-self: end;
   width: 19.3rem;
+}
+
+.footer .overlay__content-btn span {
+  color: #d9b8ff;
 }
 
 .footer .overlay__content-btn:hover {
@@ -260,10 +251,6 @@ body {
   cursor: pointer;
   width: 16.1rem;
   width: 19.3rem;
-}
-
-.footer .overlay__content-btn span {
-  color: #d9b8ff;
 }
 
 /* PERF: repetitive styles */
