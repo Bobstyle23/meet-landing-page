@@ -77,6 +77,30 @@ $spacing-4: 0.4rem;
     justify-content: center;
 }
 
+%vertical-line-style {
+    height: 8rem;
+    width: 1px;
+    background-color: $color-slate-300;
+}
+
+%step-box-style {
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 50%;
+    border: 1px solid $color-slate-300;
+    background-color: $color-white;
+    z-index: 1;
+    margin-bottom: $spacing-64;
+
+    @extend %flexbox-style;
+}
+
+%step-number-style {
+    color: $color-slate-600;
+
+    @extend %typography-preset-5;
+}
+
 /* PERF: mixins */
 
 @mixin button-style($color, $background-color) {
@@ -193,31 +217,6 @@ body {
             }
         }
     }
-}
-
-%vertical-line-style {
-    height: 8rem;
-    width: 1px;
-    background-color: $color-slate-300;
-}
-
-%step-box-style {
-    width: 5.6rem;
-    height: 5.6rem;
-    border-radius: 50%;
-    border: 1px solid $color-slate-300;
-    background-color: $color-white;
-    z-index: 1;
-
-    @extend %flexbox-style;
-
-    @include margin-bottom($spacing-64);
-}
-
-%step-number-style {
-    color: $color-slate-600;
-
-    @extend %typography-preset-5;
 }
 
 .usage {
@@ -409,6 +408,37 @@ body {
             font-size: 3.2rem;
         }
     }
+
+    .footer {
+        height: 42.8rem;
+        text-align: center;
+
+        &__overlay {
+            padding: $spacing-64 $spacing-32;
+            height: 32rem;
+        }
+
+        .overlay {
+            &__content {
+                grid-template-columns: 1fr;
+                justify-items: center;
+                align-items: center;
+                gap: $spacing-24;
+
+                &-heading {
+                    font-size: 3.2rem;
+                }
+
+                &-description {
+                    font-size: 1.6rem;
+                }
+
+                &-btn {
+                    justify-self: center;
+                }
+            }
+        }
+    }
 }
 
 /* PERF: tablets */
@@ -451,38 +481,10 @@ body {
     }
 
     .footer {
-        height: 42.8rem;
-
-        &__image {
-            &--desktop {
-                height: 32rem;
-            }
-        }
-
-        &__overlay {
-            padding: $spacing-64 $spacing-32;
-            height: 32rem;
-        }
-
         .overlay {
             &__content {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: $spacing-24;
-
-                &-heading,
-                &-description {
-                    max-width: 50.4rem;
-                }
-
                 &-heading {
                     font-size: 3.6rem;
-                }
-
-                &-description {
-                    font-size: 1.6rem;
                 }
             }
         }
@@ -548,45 +550,8 @@ body {
     .footer {
         height: 48.2rem;
 
-        &__image {
-            &--desktop {
-                display: none;
-            }
-
-            &--mobile {
-                display: block;
-                height: 37.4rem;
-                align-self: flex-end;
-                width: 100%;
-            }
-        }
-
         &__overlay {
-            padding: $spacing-64 $spacing-32;
             height: 37.4rem;
-        }
-
-        .overlay {
-            &__content {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: $spacing-24;
-
-                &-heading,
-                &-description {
-                    max-width: 31.1rem;
-                }
-
-                &-heading {
-                    font-size: 3.2rem;
-                }
-
-                &-description {
-                    font-size: 1.6rem;
-                }
-            }
         }
     }
 }
@@ -630,51 +595,6 @@ body {
 
             p:first-child {
                 font-size: 1.4rem;
-            }
-        }
-    }
-
-    .footer {
-        height: 42.8rem;
-
-        &__image {
-            &--desktop {
-                display: none;
-            }
-
-            &--mobile {
-                display: block;
-                height: 32rem;
-                align-self: flex-end;
-                width: 100%;
-            }
-        }
-
-        &__overlay {
-            padding: $spacing-64 $spacing-32;
-            height: 32rem;
-        }
-
-        .overlay {
-            &__content {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: $spacing-24;
-
-                &-heading,
-                &-description {
-                    max-width: 50rem;
-                }
-
-                &-heading {
-                    font-size: 3.2rem;
-                }
-
-                &-description {
-                    font-size: 1.6rem;
-                }
             }
         }
     }
