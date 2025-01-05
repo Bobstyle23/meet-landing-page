@@ -2,14 +2,15 @@
 /* NOTE: spacing variables */
 /* NOTE: breakpoints */
 /* PERF: mixins */
-.hero__cta--download, .hero__cta--download:hover, .hero__cta--intro, .hero__cta--intro:hover, .footer .overlay__content-btn, .footer .overlay__content-btn:hover {
-  border: none;
-  width: 20rem;
+.btn, .footer .overlay__content-btn, .footer .overlay__content-btn:hover {
+  width: 19.3rem;
   height: 5.6rem;
+  border: none;
   border-radius: 2.9rem;
-  padding: 1.6rem 3.2rem; }
+  padding: 1.6rem 4rem;
+  color: #fafafa; }
 
-.usage__step, .footer__step, .hero, .hero__header, .usage, .footer .overlay {
+.usage__step, .footer__step, .hero__image, .hero__header, .hero__cta-group, .usage, .footer .overlay {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,7 +50,7 @@ body {
   line-height: 1;
   background-color: #fafafa; }
 
-.usage__heading, .footer .overlay__content-heading, .usage__header p:first-child, .hero__description, .usage__description, .footer .overlay__content-description, .hero__cta--download, .hero__cta--download:hover, .hero__cta--intro, .hero__cta--intro:hover, .footer .overlay__content-btn, .footer .overlay__content-btn:hover, .usage__step--number, .footer__step--number, .hero__heading {
+.usage__heading, .footer .overlay__content-heading, .usage__header p:first-child, .hero__description, .usage__description, .footer .overlay__content-description, .btn, .footer .overlay__content-btn, .footer .overlay__content-btn:hover, .usage__step--number, .footer__step--number, .hero__heading {
   font-size: 6.4rem;
   font-weight: 900;
   line-height: 1.1;
@@ -67,9 +68,24 @@ body {
   font-weight: 500;
   line-height: 1.5; }
 
-.hero__cta--download, .hero__cta--download:hover, .hero__cta--intro, .hero__cta--intro:hover, .footer .overlay__content-btn, .footer .overlay__content-btn:hover, .usage__step--number, .footer__step--number {
+.btn, .footer .overlay__content-btn, .footer .overlay__content-btn:hover, .usage__step--number, .footer__step--number {
   font-size: 1.6rem;
   line-height: 1.5; }
+
+.btn--blue {
+  background-color: #4d96a9; }
+  .btn--blue span {
+    color: #8fe3f9; }
+  .btn--blue:hover {
+    background-color: #71c0d4; }
+.btn--purple {
+  background-color: #855fb1; }
+  .btn--purple span {
+    color: #d9b8ff; }
+  .btn--purple:hover {
+    background-color: #b18bdd; }
+.btn--intro {
+  width: 16.1rem; }
 
 .main-container {
   max-width: 144rem;
@@ -77,42 +93,32 @@ body {
   text-align: center; }
 
 .header {
-  max-width: 11.8rem;
-  margin: 8rem auto 0; }
+  width: 11.8rem;
+  margin: 4.8rem auto 0; }
 
 .hero {
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 6.4rem 0; }
-  .hero__img--tablet {
-    display: none; }
+  margin: 6.4rem 0 3.2rem;
+  overflow: hidden; }
+  .hero__image {
+    flex-direction: row;
+    gap: 1.69rem;
+    max-width: 43.3rem;
+    margin: 0 auto 4.8rem; }
+    .hero__image--left, .hero__image--right {
+      max-width: 20.805rem; }
+    .hero__image--left {
+      margin-left: -3.4rem; }
   .hero__header {
-    gap: 3.2rem;
-    max-width: 44.83rem;
-    padding: 0 1.8rem; }
+    gap: 2.4rem;
+    padding: 0 3.5rem; }
   .hero__heading {
+    font-size: 4rem;
     color: #28283d; }
   .hero__description {
+    font-size: 1.6rem;
     color: #87879d; }
-  .hero__cta--download {
-    background-color: #4d96a9;
-    color: #fafafa;
-    margin-right: 1.7rem; }
-    .hero__cta--download span {
-      color: #8fe3f9; }
-    .hero__cta--download:hover {
-      background-color: #71c0d4;
-      color: #fafafa;
-      cursor: pointer; }
-  .hero__cta--intro {
-    background-color: #855fb1;
-    color: #fafafa;
-    width: 16.1rem; }
-    .hero__cta--intro:hover {
-      background-color: #b18bdd;
-      color: #fafafa;
-      cursor: pointer;
-      width: 16.1rem; }
+  .hero__cta-group {
+    gap: 1.6rem; }
 
 .usage {
   max-width: 112rem;

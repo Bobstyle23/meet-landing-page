@@ -1,11 +1,12 @@
 %button-style {
-  border: none;
-  width: 20rem;
-  height: 5.6rem;
-  border-radius: 2.9rem;
-  padding: 1.6rem 3.2rem;
-
   @extend %typography-preset-5;
+
+  width: 19.3rem;
+  height: 5.6rem;
+  border: none;
+  border-radius: 2.9rem;
+  padding: 1.6rem 4rem;
+  color: $color-white;
 }
 
 %flexbox-style {

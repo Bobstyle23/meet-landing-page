@@ -1,57 +1,43 @@
 .hero {
-  @extend %flexbox-style;
+  margin: $spacing-64 0 $spacing-32;
+  overflow: hidden;
+  &__image {
+    @extend %flexbox-style;
+    flex-direction: row;
+    gap: 1.69rem;
+    max-width: 43.3rem;
+    margin: 0 auto 4.8rem;
 
-  flex-direction: row;
-  justify-content: space-between;
-  padding: $spacing-64 0;
+    &--left,
+    &--right {
+      max-width: 20.805rem;
+    }
 
-  &__img {
-    &--tablet {
-      display: none;
+    &--left {
+      margin-left: -3.4rem;
     }
   }
 
   &__header {
     @extend %flexbox-style;
-
-    gap: $spacing-32;
-    max-width: 44.83rem;
-    padding: 0 1.8rem;
+    gap: $spacing-24;
+    padding: 0 3.5rem;
   }
 
   &__heading {
     @extend %typography-preset-1;
-
+    font-size: 4rem;
     color: $color-slate-900;
   }
 
   &__description {
     @extend %typography-preset-4;
-
+    font-size: 1.6rem;
     color: $color-slate-600;
   }
 
-  &__cta {
-    &--download {
-      @include button-style($color-white, $color-cyan-600);
-
-      margin-right: 1.7rem;
-
-      span {
-        color: $color-cyan-300;
-      }
-
-      &:hover {
-        @include button-style-hover($color-white, $color-hover-blue);
-      }
-    }
-
-    &--intro {
-      @include button-style($color-white, $color-purple-600);
-
-      &:hover {
-        @include button-style-hover($color-white, $color-hover-purple);
-      }
-    }
+  &__cta-group {
+    @extend %flexbox-style;
+    gap: $spacing-16;
   }
 }
