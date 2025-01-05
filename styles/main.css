@@ -1,8 +1,7 @@
 /* NOTE:  color variables */
 /* NOTE: spacing variables */
 /* NOTE: breakpoints */
-/* PERF: mixins */
-.btn, .footer .overlay__content-btn, .footer .overlay__content-btn:hover {
+.btn {
   width: 19.3rem;
   height: 5.6rem;
   border: none;
@@ -10,28 +9,11 @@
   padding: 1.6rem 4rem;
   color: #fafafa; }
 
-.footer__step, .step, .hero__image, .hero__header, .hero__cta-group, .footer .overlay {
+.step, .hero__image, .hero__header, .hero__cta-group {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center; }
-
-.footer__vertical-line {
-  height: 8rem;
-  width: 1px;
-  background-color: #d1d1df; }
-
-.footer__step {
-  width: 5.6rem;
-  height: 5.6rem;
-  border-radius: 50%;
-  border: 1px solid #d1d1df;
-  background-color: #fafafa;
-  z-index: 1;
-  margin-bottom: 6.4rem; }
-
-.footer__step--number {
-  color: #87879d; }
 
 *,
 *::after,
@@ -50,25 +32,25 @@ body {
   line-height: 1;
   background-color: #fafafa; }
 
-.usage__heading, .footer .overlay__content-heading, .usage__subheading, .hero__description, .usage__description, .footer .overlay__content-description, .btn, .footer .overlay__content-btn, .footer .overlay__content-btn:hover, .footer__step--number, .step__box--number, .hero__heading {
+.usage__heading, .usage__subheading, .hero__description, .usage__description, .btn, .step__box--number, .hero__heading {
   font-size: 6.4rem;
   font-weight: 900;
   line-height: 1.1;
   letter-spacing: 0; }
 
-.usage__heading, .footer .overlay__content-heading {
+.usage__heading {
   font-size: 4rem; }
 
 .usage__subheading {
   font-size: 1.6rem;
   letter-spacing: 0.4rem; }
 
-.hero__description, .usage__description, .footer .overlay__content-description {
+.hero__description, .usage__description {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.5; }
 
-.btn, .footer .overlay__content-btn, .footer .overlay__content-btn:hover, .footer__step--number, .step__box--number {
+.btn, .step__box--number {
   font-size: 1.6rem;
   line-height: 1.5; }
 
@@ -163,49 +145,5 @@ body {
     font-size: 1.6rem;
     line-height: 2.4rem;
     color: #87879d; }
-
-.footer {
-  max-width: 144rem;
-  height: 42rem;
-  margin: 0 auto;
-  position: relative; }
-  .footer__vertical-line, .footer__step {
-    position: absolute;
-    left: 50%; }
-  .footer__step {
-    top: 8rem;
-    transform: translateX(-50%); }
-  .footer__overlay {
-    width: 100%;
-    height: 31.2rem;
-    background-image: linear-gradient(to bottom, rgba(77, 150, 169, 0.8), rgba(77, 150, 169, 0.8)), url("../assets/desktop/image-footer.jpg");
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    bottom: 0;
-    padding: 11.2rem 8rem; }
-  .footer .overlay {
-    max-width: 112rem; }
-    .footer .overlay__content {
-      display: grid;
-      grid-template-columns: 44.5rem 35.5rem 25.6rem;
-      column-gap: 3.2rem;
-      color: #fafafa; }
-      .footer .overlay__content-description {
-        max-width: 35.5rem; }
-      .footer .overlay__content-btn {
-        background-color: #855fb1;
-        color: #fafafa;
-        width: 16.1rem;
-        justify-self: end;
-        width: 19.3rem; }
-        .footer .overlay__content-btn span {
-          color: #d9b8ff; }
-        .footer .overlay__content-btn:hover {
-          background-color: #b18bdd;
-          color: #fafafa;
-          cursor: pointer;
-          width: 16.1rem;
-          width: 19.3rem; }
 
 /*# sourceMappingURL=main.css.map */
