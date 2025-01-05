@@ -1,0 +1,34 @@
+%typography-preset-1 {
+  font-size: 6.4rem;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+%typography-preset-2 {
+  @extend %typography-preset-1;
+
+  font-size: 4rem;
+}
+
+%typography-preset-3 {
+  @extend %typography-preset-1;
+
+  font-size: 1.6rem;
+  letter-spacing: 0.4rem;
+}
+
+%typography-preset-4 {
+  @extend %typography-preset-1;
+
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+%typography-preset-5 {
+  @extend %typography-preset-1;
+
+  font-size: 1.6rem;
+  line-height: 1.5;
+}

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="./style/styles.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/main.css" />
 
     <title>Meet landing page</title>
   </head>
@@ -27,19 +27,30 @@
     </header>
     <main class="main-container">
       <section class="hero">
-        <div class="hero__img">
-          <img
-            src="./assets/tablet/image-hero.png"
-            class="hero__img--tablet"
-            alt="Meet employers face shots"
+        <picture class="hero__img">
+          <source
+            srcset="./assets/desktop/image-hero-left.png"
+            media="(min-width: 64em)"
           />
-
-          <img
-            class="hero__img--desktop"
-            src="./assets/desktop/image-hero-left.png"
-            alt="Meet employers face shots"
+          <source
+            srcset="./assets/tablet/image-hero.png"
+            media="(min-width: 48em)"
           />
-        </div>
+          <img src="./assets/tablet/image-hero.png" alt="" />
+        </picture>
+        <!-- <div class="hero__img"> -->
+        <!--   <img -->
+        <!--     src="./assets/tablet/image-hero.png" -->
+        <!--     class="hero__img--tablet" -->
+        <!--     alt="Meet employers face shots" -->
+        <!--   /> -->
+        <!---->
+        <!--   <img -->
+        <!--     class="hero__img--desktop" -->
+        <!--     src="./assets/desktop/image-hero-left.png" -->
+        <!--     alt="Meet employers face shots" -->
+        <!--   /> -->
+        <!-- </div> -->
         <header class="hero__header">
           <h1 class="hero__heading">Group Chat for Everyone</h1>
           <p class="hero__description">

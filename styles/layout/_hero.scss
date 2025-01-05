@@ -1,0 +1,57 @@
+.hero {
+  @extend %flexbox-style;
+
+  flex-direction: row;
+  justify-content: space-between;
+  padding: $spacing-64 0;
+
+  &__img {
+    &--tablet {
+      display: none;
+    }
+  }
+
+  &__header {
+    @extend %flexbox-style;
+
+    gap: $spacing-32;
+    max-width: 44.83rem;
+    padding: 0 1.8rem;
+  }
+
+  &__heading {
+    @extend %typography-preset-1;
+
+    color: $color-slate-900;
+  }
+
+  &__description {
+    @extend %typography-preset-4;
+
+    color: $color-slate-600;
+  }
+
+  &__cta {
+    &--download {
+      @include button-style($color-white, $color-cyan-600);
+
+      margin-right: 1.7rem;
+
+      span {
+        color: $color-cyan-300;
+      }
+
+      &:hover {
+        @include button-style-hover($color-white, $color-hover-blue);
+      }
+    }
+
+    &--intro {
+      @include button-style($color-white, $color-purple-600);
+
+      &:hover {
+        @include button-style-hover($color-white, $color-hover-purple);
+      }
+    }
+  }
+}
