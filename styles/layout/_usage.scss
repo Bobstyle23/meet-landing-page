@@ -1,0 +1,62 @@
+.usage {
+  max-width: 112rem;
+  margin: $spacing-56 auto $spacing-72;
+
+  @extend %flexbox-style;
+
+  &__vertical-line {
+    @extend %vertical-line-style;
+
+    top: 0;
+  }
+
+  &__step {
+    @extend %step-box-style;
+
+    &--number {
+      @extend %step-number-style;
+    }
+  }
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 3.2rem;
+
+    @include margin-bottom($spacing-64);
+
+    img {
+      width: 25.6rem;
+      height: auto;
+      border-radius: 0.8rem;
+    }
+  }
+
+  &__header {
+    max-width: 54.4rem;
+
+    p:first-child {
+      color: $color-cyan-600;
+      text-transform: uppercase;
+
+      @include margin-bottom($spacing-16);
+
+      @extend %typography-preset-3;
+    }
+  }
+
+  &__heading {
+    color: $color-slate-900;
+    padding: 0 5.2rem;
+
+    @extend %typography-preset-2;
+
+    @include margin-bottom($spacing-32);
+  }
+
+  &__description {
+    color: $color-slate-600;
+
+    @extend %typography-preset-4;
+  }
+}

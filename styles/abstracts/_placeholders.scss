@@ -1,0 +1,41 @@
+%button-style {
+  @extend %typography-preset-5;
+
+  width: 19.3rem;
+  height: 5.6rem;
+  border: none;
+  border-radius: 2.9rem;
+  padding: 1.6rem 4rem;
+  color: $color-white;
+}
+
+%flexbox-style {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+%vertical-line-style {
+  height: 8rem;
+  width: 1px;
+  background-color: $color-slate-300;
+}
+
+%step-box-style {
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 50%;
+  border: 1px solid $color-slate-300;
+  background-color: $color-white;
+  z-index: 1;
+  margin-bottom: $spacing-64;
+
+  @extend %flexbox-style;
+}
+
+%step-number-style {
+  color: $color-slate-600;
+
+  @extend %typography-preset-5;
+}

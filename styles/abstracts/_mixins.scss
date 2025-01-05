@@ -1,0 +1,34 @@
+/* PERF: mixins */
+
+@mixin button-style($color, $background-color) {
+  background-color: $background-color;
+  color: $color;
+
+  @extend %button-style;
+
+  @if $background-color == $color-purple-600 {
+    width: 16.1rem;
+  }
+}
+
+@mixin button-style-hover($color, $background-color) {
+  background-color: $background-color;
+  color: $color;
+  cursor: pointer;
+
+  @extend %button-style;
+
+  @if $background-color == $color-hover-purple {
+    width: 16.1rem;
+  }
+}
+
+@mixin margin-bottom($spacing) {
+  margin-bottom: $spacing;
+}
+
+@mixin respond-to($breakpoint) {
+  @media #{$breakpoint} {
+    @content;
+  }
+}
