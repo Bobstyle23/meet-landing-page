@@ -1,62 +1,41 @@
 .usage {
-  max-width: 112rem;
-  margin: $spacing-56 auto $spacing-72;
-
-  @extend %flexbox-style;
-
-  &__vertical-line {
-    @extend %vertical-line-style;
-
-    top: 0;
-  }
-
-  &__step {
-    @extend %step-box-style;
-
-    &--number {
-      @extend %step-number-style;
-    }
-  }
+  padding: $spacing-32 $spacing-32 $spacing-64;
 
   &__gallery {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 3.2rem;
-
-    @include margin-bottom($spacing-64);
+    grid-template-columns: repeat(2, 1fr);
+    padding: $spacing-64 0;
+    gap: $spacing-16;
 
     img {
-      width: 25.6rem;
-      height: auto;
+      width: 100%;
+      min-height: auto;
       border-radius: 0.8rem;
     }
   }
 
-  &__header {
-    max-width: 54.4rem;
-
-    p:first-child {
-      color: $color-cyan-600;
-      text-transform: uppercase;
-
-      @include margin-bottom($spacing-16);
-
-      @extend %typography-preset-3;
-    }
-  }
-
   &__heading {
-    color: $color-slate-900;
-    padding: 0 5.2rem;
-
     @extend %typography-preset-2;
-
     @include margin-bottom($spacing-32);
+
+    font-size: 3.2rem;
+    line-height: 3.52rem;
+    color: $color-slate-900;
   }
 
-  &__description {
-    color: $color-slate-600;
+  &__subheading {
+    @extend %typography-preset-3;
+    @include margin-bottom($spacing-16);
 
+    color: $color-cyan-600;
+    font-size: 1.2rem;
+    line-height: 1.32rem;
+    text-transform: uppercase;
+  }
+  &__description {
     @extend %typography-preset-4;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: $color-slate-600;
   }
 }

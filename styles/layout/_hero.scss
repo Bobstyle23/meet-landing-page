@@ -1,5 +1,5 @@
 .hero {
-  margin: $spacing-64 0 $spacing-32;
+  padding: $spacing-64 0 $spacing-32;
   overflow: hidden;
   &__image {
     @extend %flexbox-style;

@@ -1,8 +1,7 @@
 /* NOTE:  color variables */
 /* NOTE: spacing variables */
 /* NOTE: breakpoints */
-/* PERF: mixins */
-.btn, .footer .overlay__content-btn, .footer .overlay__content-btn:hover {
+.btn {
   width: 19.3rem;
   height: 5.6rem;
   border: none;
@@ -10,28 +9,11 @@
   padding: 1.6rem 4rem;
   color: #fafafa; }
 
-.usage__step, .footer__step, .hero__image, .hero__header, .hero__cta-group, .usage, .footer .overlay {
+.step, .step__box, .hero__image, .hero__header, .hero__cta-group, .footer .overlay__content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center; }
-
-.usage__vertical-line, .footer__vertical-line {
-  height: 8rem;
-  width: 1px;
-  background-color: #d1d1df; }
-
-.usage__step, .footer__step {
-  width: 5.6rem;
-  height: 5.6rem;
-  border-radius: 50%;
-  border: 1px solid #d1d1df;
-  background-color: #fafafa;
-  z-index: 1;
-  margin-bottom: 6.4rem; }
-
-.usage__step--number, .footer__step--number {
-  color: #87879d; }
 
 *,
 *::after,
@@ -50,7 +32,7 @@ body {
   line-height: 1;
   background-color: #fafafa; }
 
-.usage__heading, .footer .overlay__content-heading, .usage__header p:first-child, .hero__description, .usage__description, .footer .overlay__content-description, .btn, .footer .overlay__content-btn, .footer .overlay__content-btn:hover, .usage__step--number, .footer__step--number, .hero__heading {
+.usage__heading, .footer .overlay__content-heading, .usage__subheading, .hero__description, .usage__description, .footer .overlay__content-description, .btn, .step__box--number, .hero__heading {
   font-size: 6.4rem;
   font-weight: 900;
   line-height: 1.1;
@@ -59,7 +41,7 @@ body {
 .usage__heading, .footer .overlay__content-heading {
   font-size: 4rem; }
 
-.usage__header p:first-child {
+.usage__subheading {
   font-size: 1.6rem;
   letter-spacing: 0.4rem; }
 
@@ -68,7 +50,7 @@ body {
   font-weight: 500;
   line-height: 1.5; }
 
-.btn, .footer .overlay__content-btn, .footer .overlay__content-btn:hover, .usage__step--number, .footer__step--number {
+.btn, .step__box--number {
   font-size: 1.6rem;
   line-height: 1.5; }
 
@@ -87,6 +69,23 @@ body {
 .btn--intro {
   width: 16.1rem; }
 
+.step {
+  width: 5.6rem;
+  height: 13.6rem;
+  margin: 0 auto; }
+  .step__line {
+    width: 1px;
+    height: 8rem;
+    background-color: #d1d1df; }
+  .step__box {
+    width: 5.6rem;
+    height: 5.6rem;
+    border: 1px solid #d1d1df;
+    border-radius: 50%;
+    background-color: #fafafa; }
+    .step__box--number {
+      color: #87879d; }
+
 .main-container {
   max-width: 144rem;
   margin: 0 auto;
@@ -97,7 +96,7 @@ body {
   margin: 4.8rem auto 0; }
 
 .hero {
-  margin: 6.4rem 0 3.2rem;
+  padding: 6.4rem 0 3.2rem;
   overflow: hidden; }
   .hero__image {
     flex-direction: row;
@@ -121,74 +120,72 @@ body {
     gap: 1.6rem; }
 
 .usage {
-  max-width: 112rem;
-  margin: 5.6rem auto 7.2rem; }
-  .usage__vertical-line {
-    top: 0; }
+  padding: 3.2rem 3.2rem 6.4rem; }
   .usage__gallery {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 3.2rem;
-    margin-bottom: 6.4rem; }
+    grid-template-columns: repeat(2, 1fr);
+    padding: 6.4rem 0;
+    gap: 1.6rem; }
     .usage__gallery img {
-      width: 25.6rem;
-      height: auto;
+      width: 100%;
+      min-height: auto;
       border-radius: 0.8rem; }
-  .usage__header {
-    max-width: 54.4rem; }
-    .usage__header p:first-child {
-      color: #4d96a9;
-      text-transform: uppercase;
-      margin-bottom: 1.6rem; }
   .usage__heading {
-    color: #28283d;
-    padding: 0 5.2rem;
-    margin-bottom: 3.2rem; }
+    margin-bottom: 3.2rem;
+    font-size: 3.2rem;
+    line-height: 3.52rem;
+    color: #28283d; }
+  .usage__subheading {
+    margin-bottom: 1.6rem;
+    color: #4d96a9;
+    font-size: 1.2rem;
+    line-height: 1.32rem;
+    text-transform: uppercase; }
   .usage__description {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
     color: #87879d; }
 
 .footer {
-  max-width: 144rem;
-  height: 42rem;
-  margin: 0 auto;
-  position: relative; }
-  .footer__vertical-line, .footer__step {
-    position: absolute;
-    left: 50%; }
+  position: relative;
+  width: 100%;
+  height: 48.2rem;
+  top: -2.8rem; }
   .footer__step {
-    top: 8rem;
-    transform: translateX(-50%); }
+    position: relative;
+    top: 2.8rem;
+    z-index: 10; }
+  .footer__image {
+    position: relative;
+    display: inline-block;
+    height: 37.4rem;
+    width: 100%; }
+    .footer__image::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #4d96a9;
+      opacity: 0.85;
+      width: 100%;
+      height: 100%; }
+    .footer__image img {
+      width: 100%;
+      height: 100%; }
   .footer__overlay {
-    width: 100%;
-    height: 31.2rem;
-    background-image: linear-gradient(to bottom, rgba(77, 150, 169, 0.8), rgba(77, 150, 169, 0.8)), url("../assets/desktop/image-footer.jpg");
-    background-size: cover;
-    background-position: center;
     position: absolute;
-    bottom: 0;
-    padding: 11.2rem 8rem; }
-  .footer .overlay {
-    max-width: 112rem; }
-    .footer .overlay__content {
-      display: grid;
-      grid-template-columns: 44.5rem 35.5rem 25.6rem;
-      column-gap: 3.2rem;
-      color: #fafafa; }
-      .footer .overlay__content-description {
-        max-width: 35.5rem; }
-      .footer .overlay__content-btn {
-        background-color: #855fb1;
-        color: #fafafa;
-        width: 16.1rem;
-        justify-self: end;
-        width: 19.3rem; }
-        .footer .overlay__content-btn span {
-          color: #d9b8ff; }
-        .footer .overlay__content-btn:hover {
-          background-color: #b18bdd;
-          color: #fafafa;
-          cursor: pointer;
-          width: 16.1rem;
-          width: 19.3rem; }
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 6.4rem 3.2rem;
+    z-index: 1; }
+  .footer .overlay__content {
+    gap: 2.4rem;
+    text-align: center;
+    color: #fafafa; }
+    .footer .overlay__content-heading {
+      font-size: 3.2rem;
+      line-height: 3.52rem; }
+    .footer .overlay__content-description {
+      font-size: 1.6rem; }
 
 /*# sourceMappingURL=main.css.map */
