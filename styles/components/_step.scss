@@ -11,11 +11,12 @@
   }
 
   &__box {
+    @extend %flexbox-style;
     width: 5.6rem;
     height: 5.6rem;
     border: 1px solid $color-slate-300;
     border-radius: 50%;
-    padding: $spacing-16 1.9rem;
+    background-color: $color-white;
 
     &--number {
       @extend %typography-preset-5;
