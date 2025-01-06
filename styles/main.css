@@ -123,12 +123,14 @@ body {
   padding: 3.2rem 3.2rem 6.4rem; }
   .usage__gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(14.75rem, 1fr));
     padding: 6.4rem 0;
     gap: 1.6rem; }
     .usage__gallery img {
-      width: 100%;
-      min-height: auto;
+      max-width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
       border-radius: 0.8rem; }
   .usage__heading {
     margin-bottom: 3.2rem;

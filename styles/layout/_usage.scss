@@ -3,13 +3,15 @@
 
   &__gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(14.75rem, 1fr));
     padding: $spacing-64 0;
     gap: $spacing-16;
 
     img {
-      width: 100%;
-      min-height: auto;
+      max-width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
       border-radius: 0.8rem;
     }
   }
