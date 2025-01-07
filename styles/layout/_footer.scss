@@ -1,61 +1,42 @@
 .footer {
-  position: relative;
   width: 100%;
   height: 48.2rem;
-  top: -2.8rem;
 
   &__step {
     position: relative;
-    top: 2.8rem;
-    z-index: 10;
+    z-index: 2;
   }
 
-  &__image {
+  &__content {
     position: relative;
-    display: inline-block;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: $color-cyan-600;
-      opacity: 0.85;
-      width: 100%;
-      height: 100%;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-  }
-
-  &__overlay {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: $spacing-64 $spacing-32;
+    top: -2.8rem;
     z-index: 1;
-  }
+    max-width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        to bottom,
+        rgba($color-cyan-600, 0.8),
+        rgba($color-cyan-600, 0.8)
+      ),
+      url("../../assets/mobile/image-footer.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: $spacing-64 $spacing-32;
+    @extend %flexbox-style;
+    gap: 2.4rem;
+    color: $color-white;
+    text-align: center;
 
-  .overlay {
-    &__content {
-      @extend %flexbox-style;
-      gap: 2.4rem;
-      text-align: center;
-      color: $color-white;
+    &-title {
+      @extend %typography-preset-2;
+      font-size: 3.2rem;
+      line-height: 3.52rem;
+    }
 
-      &-heading {
-        @extend %typography-preset-2;
-        font-size: 3.2rem;
-        line-height: 3.52rem;
-      }
-
-      &-description {
-        @extend %typography-preset-4;
-        font-size: 1.6rem;
-      }
+    &-description {
+      @extend %typography-preset-4;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
     }
   }
 }
