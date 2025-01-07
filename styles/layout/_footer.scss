@@ -29,7 +29,7 @@
     height: 100%;
     background-color: rgba($color-cyan-600, 0.8);
     padding: $spacing-64 $spacing-32;
-    z-index: -1;
+    z-index: 1;
     @extend %flexbox-style;
     gap: 2.4rem;
   }
