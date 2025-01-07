@@ -1,20 +1,10 @@
 .hero {
   padding: $spacing-64 0 $spacing-32;
-  overflow: hidden;
   &__image {
-    @extend %flexbox-style;
-    flex-direction: row;
-    gap: 1.69rem;
-    max-width: 43.3rem;
-    margin: 0 auto 4.8rem;
-
-    &--left,
-    &--right {
-      max-width: 20.805rem;
-    }
-
-    &--left {
-      margin-left: -3.4rem;
+    img {
+      width: 100%;
+      height: auto;
+      margin: 0 auto 4.8rem;
     }
   }
 
