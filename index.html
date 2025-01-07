@@ -104,23 +104,38 @@
       </section>
     </main>
 
+    <header class="step footer__step">
+      <div class="step__line"></div>
+      <div class="step__box">
+        <p class="step__box--number">02</p>
+      </div>
+    </header>
     <footer class="footer">
-      <header class="step footer__step">
-        <div class="step__line"></div>
-        <div class="step__box">
-          <p class="step__box--number">02</p>
+      <picture class="footer__image">
+        <source
+          srcset="./assets/desktop/image-footer.jpg"
+          media="(min-width: 64em)"
+        />
+        <source
+          srcset="./assets/tablet/image-footer.jpg"
+          media="(min-width: 48em)"
+        />
+        <img
+          src="./assets/mobile/image-footer.jpg"
+          alt="Woman listening to music with headphones on"
+        />
+      </picture>
+      <section class="footer__overlay">
+        <div class="overlay__content">
+          <h1 class="overlay__content-title">Experience more together</h1>
+          <p class="overlay__content-description">
+            Stay connected with reliable HD meetings and unlimited one-on-one
+            and group video sessions.
+          </p>
+          <button type="button" class="btn btn--purple">
+            Download <span>v1.3</span>
+          </button>
         </div>
-      </header>
-
-      <section class="footer__content">
-        <h1 class="footer__content-title">Experience more together</h1>
-        <p class="footer__content-description">
-          Stay connected with reliable HD meetings and unlimited one-on-one and
-          group video sessions.
-        </p>
-        <button type="button" class="btn btn--purple">
-          Download <span>v1.3</span>
-        </button>
       </section>
     </footer>
   </body>
