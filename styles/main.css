@@ -149,7 +149,8 @@ body {
   height: 100%; }
   .footer__step {
     position: relative;
-    top: 2.8rem; }
+    top: 2.8rem;
+    z-index: 2; }
   .footer__image {
     position: relative;
     z-index: -1;
