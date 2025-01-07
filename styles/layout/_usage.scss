@@ -1,0 +1,43 @@
+.usage {
+  padding: $spacing-32 $spacing-32 $spacing-64;
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14.75rem, 1fr));
+    padding: $spacing-64 0;
+    gap: $spacing-16;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 0.8rem;
+    }
+  }
+
+  &__heading {
+    @extend %typography-preset-2;
+    @include margin-bottom($spacing-32);
+
+    font-size: 3.2rem;
+    line-height: 3.52rem;
+    color: $color-slate-900;
+  }
+
+  &__subheading {
+    @extend %typography-preset-3;
+    @include margin-bottom($spacing-16);
+
+    color: $color-cyan-600;
+    font-size: 1.2rem;
+    line-height: 1.32rem;
+    text-transform: uppercase;
+  }
+  &__description {
+    @extend %typography-preset-4;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: $color-slate-600;
+  }
+}

@@ -1,0 +1,9 @@
+@mixin margin-bottom($spacing) {
+  margin-bottom: $spacing;
+}
+
+@mixin respond-to($breakpoint) {
+  @media #{$breakpoint} {
+    @content;
+  }
+}

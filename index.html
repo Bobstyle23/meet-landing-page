@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -15,59 +15,64 @@
       href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="./style/styles.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/main.css" />
 
     <title>Meet landing page</title>
   </head>
   <body>
     <header class="header">
       <div class="header__logo">
-        <img class="header__logo" src="./assets/logo.svg" alt="Meet logo" />
+        <img src="./assets/logo.svg" alt="Meet logo" />
       </div>
     </header>
     <main class="main-container">
       <section class="hero">
-        <div class="hero__img">
-          <img
-            src="./assets/tablet/image-hero.png"
-            class="hero__img--tablet"
-            alt="Meet employers face shots"
+        <picture class="hero__image">
+          <source
+            srcset="./assets/desktop/image-hero-left.png"
+            media="(min-width: 64em)"
           />
-
+          <source
+            srcset="./assets/tablet/image-hero.png"
+            media="(min-width:48em)"
+          />
           <img
-            class="hero__img--desktop"
+            class="hero__image--left"
             src="./assets/desktop/image-hero-left.png"
-            alt="Meet employers face shots"
+            alt="Face shots of employers in Meet"
           />
-        </div>
+          <img
+            class="hero__image--right"
+            src="./assets/desktop/image-hero-right.png"
+            alt="Face shots of employers in Meet"
+          />
+        </picture>
         <header class="hero__header">
-          <h1 class="hero__heading">Group Chat for Everyone</h1>
+          <h1 class="hero__heading">
+            Group Chat <br />
+            for Everyone
+          </h1>
           <p class="hero__description">
             Meet makes it easy to connect with others face-to-face virtually and
             collaborate across any device.
           </p>
           <div class="hero__cta-group">
-            <button class="hero__cta hero__cta--download" type="button">
+            <button class="btn btn--blue" type="button">
               Download <span>v1.3</span>
             </button>
-            <button class="hero__cta hero__cta--intro" type="button">
+            <button class="btn btn--purple btn--intro" type="button">
               What is it?
             </button>
           </div>
         </header>
-        <div class="hero__img">
-          <img
-            class="hero__img--desktop"
-            src="./assets/desktop/image-hero-right.png"
-            alt="Meet employers face shots"
-          />
-        </div>
       </section>
 
       <section class="usage">
-        <div class="usage__vertical-line"></div>
-        <div class="usage__step">
-          <p class="usage__step--number">01</p>
+        <div class="step">
+          <div class="step__line"></div>
+          <div class="step__box">
+            <p class="step__box--number">01</p>
+          </div>
         </div>
         <div class="usage__gallery">
           <img
@@ -99,27 +104,36 @@
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="footer__vertical-line"></div>
-      <div class="footer__step">
-        <p class="footer__step--number">02</p>
+    <header class="step footer__step">
+      <div class="step__line"></div>
+      <div class="step__box">
+        <p class="step__box--number">02</p>
       </div>
-
+    </header>
+    <footer class="footer">
+      <picture class="footer__image">
+        <source
+          srcset="./assets/desktop/image-footer.jpg"
+          media="(min-width: 64em)"
+        />
+        <source
+          srcset="./assets/tablet/image-footer.jpg"
+          media="(min-width: 48em)"
+        />
+        <img
+          src="./assets/mobile/image-footer.jpg"
+          alt="Woman listening to music with headphones on"
+        />
+      </picture>
       <section class="footer__overlay">
-        <div
-          class="footer__overlay-img"
-          aria-label="Woman listening to music with a headphones"
-        ></div>
-        <div class="overlay__content">
-          <h1 class="overlay__content-heading">Experience more together</h1>
-          <p class="overlay__content-description">
-            Stay connected with reliable HD meetings and unlimited one-on-one
-            and group video sessions.
-          </p>
-          <button class="overlay__content-btn" type="button">
-            Download <span>v1.3</span>
-          </button>
-        </div>
+        <h1 class="overlay__title">Experience more together</h1>
+        <p class="overlay__description">
+          Stay connected with reliable HD meetings and unlimited one-on-one and
+          group video sessions.
+        </p>
+        <button type="button" class="btn btn--purple">
+          Download <span>v1.3</span>
+        </button>
       </section>
     </footer>
   </body>

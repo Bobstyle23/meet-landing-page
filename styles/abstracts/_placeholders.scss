@@ -1,0 +1,17 @@
+%button-style {
+  @extend %typography-preset-5;
+
+  width: 19.3rem;
+  height: 5.6rem;
+  border: none;
+  border-radius: 2.9rem;
+  padding: 1.6rem 3.2rem;
+  color: $color-white;
+}
+
+%flexbox-style {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

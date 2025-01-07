@@ -1,0 +1,26 @@
+.step {
+  @extend %flexbox-style;
+  width: 5.6rem;
+  height: 13.6rem;
+  margin: 0 auto;
+
+  &__line {
+    width: 1px;
+    height: 8rem;
+    background-color: $color-slate-300;
+  }
+
+  &__box {
+    @extend %flexbox-style;
+    width: 5.6rem;
+    height: 5.6rem;
+    border: 1px solid $color-slate-300;
+    border-radius: 50%;
+    background-color: $color-white;
+
+    &--number {
+      @extend %typography-preset-5;
+      color: $color-slate-600;
+    }
+  }
+}
