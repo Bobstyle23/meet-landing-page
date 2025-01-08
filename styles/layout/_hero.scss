@@ -1,6 +1,11 @@
 .hero {
+  @extend %grid;
   padding: $spacing-64 0 $spacing-32;
+
   &__image {
+    &--right {
+      display: none;
+    }
     img {
       width: 100%;
       height: auto;
@@ -35,8 +40,6 @@
 @include respond-to($breakpoint-tablets) {
   .hero {
     padding: $spacing-64 0;
-    display: grid;
-    grid-template-columns: 1fr;
     row-gap: 7.2rem;
 
     &__header {
@@ -53,6 +56,34 @@
     &__cta-group {
       flex-direction: row;
       gap: 1.7rem;
+    }
+  }
+}
+
+@include respond-to($breakpoint-desktops) {
+  .hero {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: $spacing-32;
+
+    &__image {
+      &--right {
+        display: block;
+      }
+    }
+
+    &__header {
+      gap: $spacing-32;
+      max-width: 44rem;
+    }
+
+    &__heading {
+      font-size: 6.4rem;
+      line-height: 7.04rem;
+    }
+
+    &__description {
+      font-size: 1.8rem;
+      line-height: 2.7rem;
     }
   }
 }
