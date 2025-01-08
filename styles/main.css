@@ -258,5 +258,24 @@ body {
       line-height: 3.96rem; }
     .footer .overlay__description {
       max-width: 50.4rem; } }
+@media (min-width: 75em) {
+  .footer {
+    height: 42rem;
+    text-align: left; }
+    .footer__image, .footer__overlay {
+      height: 31.2rem; }
+    .footer__overlay {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 3.2rem;
+      align-items: start;
+      padding: 11.2rem 16rem; }
+      .footer__overlay button {
+        justify-self: end; }
+    .footer .overlay__title {
+      font-size: 4rem;
+      line-height: 1.1; }
+    .footer .overlay__description {
+      font-size: 1.8rem;
+      line-height: 1.5; } }
 
 /*# sourceMappingURL=main.css.map */

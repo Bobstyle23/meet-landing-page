@@ -78,3 +78,38 @@
     }
   }
 }
+
+@include respond-to($breakpoint-desktops) {
+  .footer {
+    height: 42rem;
+    text-align: left;
+
+    &__image,
+    &__overlay {
+      height: 31.2rem;
+    }
+
+    &__overlay {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: $spacing-32;
+      align-items: start;
+      padding: 11.2rem 16rem;
+
+      button {
+        justify-self: end;
+      }
+    }
+
+    .overlay {
+      &__title {
+        font-size: 4rem;
+        line-height: 1.1;
+      }
+
+      &__description {
+        font-size: 1.8rem;
+        line-height: 1.5;
+      }
+    }
+  }
+}
