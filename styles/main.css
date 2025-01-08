@@ -113,6 +113,22 @@ body {
   .hero__cta-group {
     gap: 1.6rem; }
 
+@media (min-width: 48em) {
+  .hero {
+    padding: 6.4rem 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 7.2rem; }
+    .hero__header {
+      padding: 0;
+      max-width: 45rem;
+      margin: 0 auto; }
+    .hero__heading {
+      font-size: 4.8rem;
+      line-height: 5.28rem; }
+    .hero__cta-group {
+      flex-direction: row;
+      gap: 1.7rem; } }
 .usage {
   padding: 3.2rem 3.2rem 6.4rem; }
   .usage__gallery {
@@ -156,9 +172,7 @@ body {
     display: block; }
     .footer__image img {
       width: 100%;
-      height: 100%;
-      /* aspect-ratio: 1 / 1; */
-      /* object-fit: cover; */ }
+      height: 100%; }
   .footer__overlay {
     position: absolute;
     top: 0;

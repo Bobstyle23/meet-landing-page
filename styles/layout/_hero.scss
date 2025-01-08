@@ -31,3 +31,28 @@
     gap: $spacing-16;
   }
 }
+
+@include respond-to($breakpoint-tablets) {
+  .hero {
+    padding: $spacing-64 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 7.2rem;
+
+    &__header {
+      padding: 0;
+      max-width: 45rem;
+      margin: 0 auto;
+    }
+
+    &__heading {
+      font-size: 4.8rem;
+      line-height: 5.28rem;
+    }
+
+    &__cta-group {
+      flex-direction: row;
+      gap: 1.7rem;
+    }
+  }
+}
