@@ -101,6 +101,9 @@ body {
   width: 11.8rem;
   margin: 4.8rem auto 0; }
 
+@media (min-width: 75em) {
+  .header {
+    margin: 8rem auto 0; } }
 .hero {
   padding: 6.4rem 0 3.2rem; }
   .hero__image--right {

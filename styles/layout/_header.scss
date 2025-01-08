@@ -2,3 +2,9 @@
   width: 11.8rem;
   margin: $spacing-48 auto 0;
 }
+
+@include respond-to($breakpoint-desktops) {
+  .header {
+    margin: $spacing-80 auto 0;
+  }
+}
