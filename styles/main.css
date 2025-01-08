@@ -196,6 +196,21 @@ body {
       line-height: 1.54rem; }
     .usage__description {
       max-width: 50.4rem; } }
+@media (min-width: 75em) {
+  .usage {
+    padding: 5.6rem 16rem 7.2rem; }
+    .usage__gallery {
+      column-gap: 3.2rem; }
+    .usage__subheading {
+      font-size: 1.6rem;
+      line-height: 1.76rem; }
+    .usage__heading {
+      font-size: 4rem;
+      line-height: 1.1; }
+    .usage__description {
+      font-size: 1.8rem;
+      line-height: 1.5;
+      max-width: 54.4rem; } }
 .footer {
   position: relative;
   color: #fafafa;

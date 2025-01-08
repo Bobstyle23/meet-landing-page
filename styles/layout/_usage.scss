@@ -51,7 +51,7 @@
     padding: 5.6rem 4.4rem $spacing-64;
 
     &__gallery {
-      column-gap: 2.4rem;
+      column-gap: $spacing-24;
     }
 
     &__heading {
@@ -67,6 +67,32 @@
 
     &__description {
       max-width: 50.4rem;
+    }
+  }
+}
+
+@include respond-to($breakpoint-desktops) {
+  .usage {
+    padding: 5.6rem 16rem $spacing-72;
+
+    &__gallery {
+      column-gap: $spacing-32;
+    }
+
+    &__subheading {
+      font-size: 1.6rem;
+      line-height: 1.76rem;
+    }
+
+    &__heading {
+      font-size: 4rem;
+      line-height: 1.1;
+    }
+
+    &__description {
+      font-size: 1.8rem;
+      line-height: 1.5;
+      max-width: 54.4rem;
     }
   }
 }
